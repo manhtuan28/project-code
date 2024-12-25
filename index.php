@@ -90,10 +90,10 @@
         <div class="modal-content">
             <span class="close" onclick="closeLoginModal()">&times;</span>
             <h2>Đăng nhập</h2>
-            <form id="loginForm">
+            <form id="loginForm" action="./view/login.php">
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Mật khẩu" required>
-                <button type="submit">Đăng nhập</button>
+                <button type="submit" name="signIn">Đăng nhập</button>
             </form>
         </div>
     </div>
@@ -103,12 +103,12 @@
         <div class="modal-content">
             <span class="close" onclick="closeRegisterModal()">&times;</span>
             <h2>Đăng ký</h2>
-            <form id="registerForm">
-                <input type="text" placeholder="Họ và tên" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Mật khẩu" required>
-                <input type="password" placeholder="Xác nhận lại mật khẩu" required>
-                <button type="submit">Đăng ký</button>
+            <form id="registerForm" method="POST" action="./view/register.php">
+                <input type="text" placeholder="Họ và tên" name="userName" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Mật khẩu" name="password" required>
+                <input type="password" placeholder="Xác nhận lại mật khẩu" name="confirmPassword" required>
+                <button type="submit" name="signUp">Đăng ký</button>
             </form>
         </div>
     </div>
